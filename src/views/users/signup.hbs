@@ -1,0 +1,25 @@
+<div class="iman">
+    <div>
+        <img src="/img/cv-group.svg" style="width: 50%; align-self:center; margin-left:50rem; margin-top:6rem;">
+    </div>
+    <div class="forma" style="box-shadow:none; position:absolute; margin-left: 18rem;">
+        <div class="card" style="margin-left: -8rem; margin-top: 2rem;">
+            <h1>Registro de Usuario</h1>
+            <form action="/users/signup" method="POST">
+                <div class="form-group marginuser">
+                    <input type="email" name="email" placeholder="Direccion Email" value="{{email}}">
+                </div>
+                <div class="form-group marginuser">
+                    <input type="password" name="password" placeholder="Ingrese Password minimo 6 caracteres">
+                </div>
+                <div class="form-group marginuser">
+                    <input type="password" name="confirm_password" placeholder="Confirmar Password">
+                </div>
+                <div class="form-group marginuser">
+                    <button type="submit" class="btn-primary">Registrar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="line1"></div>

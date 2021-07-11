@@ -1,0 +1,27 @@
+<div class="section sectionform" style="margin-left: 10rem;">
+    <div class="article">
+<div class="card">
+    <h1>Editar Datos Educativos</h1>
+    <form action="/edu/edit-edu/{{eedu._id}}?_method=PUT" method="POST">
+        <input type="hidden" name="_method" value="PUT">
+        <div class="form-person">
+            <label for="carrer">Carrera/Profesion</label>
+            <input type="text" name="carrer" value="{{eedu.carrer}}">
+            <label for="from">Fecha Inicio</label>
+            <label class="llabel">{{moment eedu.from "DD/MM/YYYY"}}</label>
+
+        </div>
+        <div class="form-person">
+            <label for="school">Instituto/Universidad</label>
+            <input type="text" name="school" value="{{eedu.school}}">
+            <label for="to">Fecha Completado</label>
+            <label class="llabel">{{moment eedu.to "DD/MM/YYYY"}}</label>
+        </div>
+        <div class="form-person">
+          <a href="/edu/edit2/{{eedu._id}}" class="btn-primary" style="margin-left: 55rem;">Cambiar Fecha</a>
+
+        </div>
+            <button type="submit" class="btn-primary">Salvar</button>
+   </form>
+</div></div>
+</div>

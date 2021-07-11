@@ -1,0 +1,21 @@
+<div class="section sectionform">
+    <div class="article" style="margin-left: 6rem;">
+    <div class="card">
+        <h1>Ingresar Conocimiento</h1>
+   <form action="/know/add" method="POST">
+        <div class="form-person">
+            <label for="knowing">Conocimiento</label>
+            <input type="text" name="knowing" required="true">
+        </div>
+            <button type="submit" class="btn-primary">Salvar</button>
+   </form>
+   {{#if aknow}}
+    <ul class="cul">
+    {{#each aknow}}
+            <ol>{{knowing}}<a href="/know/delete/{{_id}}" class="btn-secund" style="margin-left: .2rem;">x</a>
+            </ol>
+    {{/each}}
+    </ul>
+    {{/if}}
+    <a href="/data" class="btn-primary">Completado</a>
+</div></div></div>

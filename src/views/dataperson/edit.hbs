@@ -1,0 +1,40 @@
+<div class="section sectionform">
+    <div class="article" style="margin-left: -12rem;">
+        <div class="card">
+            <h1>Editar Datos Personales</h1>
+
+            <form action="/person/edit-person/{{eperson._id}}?_method=PUT" method="POST">
+                <input type="hidden" name="_method" value="PUT">
+                <div class="form-person">
+                    <label for="firts_name">Nombre</label>
+                    <input type="text" name="firts_name" value="{{eperson.firts_name}}">
+                    <label for="last_name">Apellido</label>
+                    <input type="text" name="last_name" value="{{eperson.last_name}}">
+                </div>
+                <div class="form-person">
+                    <label for="country">Pais</label>
+                    <input type="text" name="country" value="{{eperson.country}}">
+                    <label for="last_name">Telefono Contacto</label>
+                    <input type="text" name="phone" value="{{eperson.phone}}">
+                </div>
+                <div class="form-person">
+                    <label for="linkedin">Dirección Linkedin</label>
+                    <input type="text" name="linkedin" value="{{eperson.linkedin}}">
+                    <label for="github">Otra Red Social</label>
+                    <input type="text" name="github" value="{{eperson.github}}">
+                </div>
+                <div class="form-person">
+                    <label for="skype">Dirección Skype</label>
+                    <input type="text" value={{eperson.skype}} name="skype">
+                </div>
+
+                <div class="form-person">
+                    <label for="summary">Sumario</label>
+                    <textarea name="summary">{{eperson.summary}}</textarea>
+
+                </div>
+                <button type="submit" class="btn-primary">Salvar</button>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,26 @@
+<div class="section sectionform" style="margin-left: 22rem;">
+    <div class="article">
+    <div class="card">
+        <h1>Ingresar Idiomas y Nivel</h1>
+   <form action="/lang/Eadd" method="POST">
+        <div class="form-person">
+            <label for="idioms">Idioma</label>
+            <input type="text" name="idioms" required="true">
+        </div>
+        <div class="form-person">
+            <label for="level">Nivel</label>
+            <input type="text" name="level" list="list">
+            <datalist id="list">
+                <option value="Nativo">Nativo</option>
+                <option value="Basico">Basico</option>
+                <option value="Intermedio">Intermedio</option>
+                <option value="Avanzado">Avanzado</option>
+            </datalist>
+        </div>
+        <div class="form-person">
+            <span style="font-size: 12px; margin-left: 12rem;">Para cambiar borrar y seleccionar</span>
+        </div>
+            <button type="submit" class="btn-primary">Salvar</button>
+   
+   </form>
+</div></div></div>

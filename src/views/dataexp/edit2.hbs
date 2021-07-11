@@ -1,0 +1,52 @@
+<div class="section sectionform">
+    <div class="article" style="margin-left: -12rem;">
+        <div class="card">
+            <h1>Ingresar Datos Experiencia Laboral</h1>
+            <form action="/exp/edit/{{eexp._id}}?_method=PUT" method="POST">
+                <input type="hidden" name="_method" value="PUT">
+                <div class="form-person">
+                    <label for="company">Empresa</label>
+                    <input type="text" name="company" value="{{eexp.company}}">
+                    <label for="wfrom">Fecha Inicio</label>
+                    <input type="date" name="wfrom" required="true">
+                </div>
+                <div class="form-person">
+                    <p style="margin-left: 42rem; color: red;">Fecha Inicio Anterior: {{moment eexp.wfrom "DD/MM/YYYY"}}
+                    </p>
+                </div>
+                <div class="form-person">
+                    <label for="position">Cargo/Función</label>
+                    <input type="text" name="position" value="{{eexp.position}}">
+                    <fieldset id="check" class="form-person">
+                        <label for="wto">Fecha Salida</label>
+                        <input type="date" name="wto">
+                    </fieldset>
+                </div>
+                <div class="form-person">
+                    <p style="margin-left: 42rem; color: red;">Fecha Inicio Anterior: {{moment eexp.wto "DD/MM/YYYY"}}
+                    </p>
+                </div>
+
+                <div class="form-person">
+                    <label for="follow">Continua en Cargo</label>
+                    <input type="checkbox" name="follow" id="follow" value="{{eexp.follow}}">
+                </div>
+
+                <div class="form-person">
+                    <label for="detail">Detalle de la función</label>
+                    <textarea name="detail">{{eexp.detail}}</textarea>
+                </div>
+                <button type="submit" class="btn-primary">Salvar</button>
+            </form>
+        </div>
+    </div>
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        document.getElementById('follow').addEventListener('change', review);
+    }, true);
+    function review() {
+        let Items = document.querySelectorAll('#check input[type="text"]');
+        Items[0].disabled = !Items[0].disabled;
+    }
+</script>

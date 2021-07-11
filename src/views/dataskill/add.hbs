@@ -1,0 +1,23 @@
+<div class="section sectionform">
+    <div class="article">
+    <div class="card">
+        <h1>Ingresar Habilidades</h1>
+   <form action="/skill/add-post" method="POST">
+        <div class="form-person">
+            <label for="skill">Habilidad</label>
+            <input type="text" name="skill" required="true">
+        </div>
+            <button type="submit" class="btn-primary">Agregar</button>
+        
+   </form>
+   {{#if eskill}}
+    <ul class="cul">
+    {{#each eskill}}
+            <ol>{{skill}}<a href="/skill/delete/{{_id}}" class="btn-secund" style="margin-left: .2rem;">x</a>
+            </ol>
+    {{/each}}
+    </ul>
+    {{/if}}
+    <a href="/data" class="btn-primary">Completado</a>
+
+</div></div></div>

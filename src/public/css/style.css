@@ -1,0 +1,643 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+  }
+  
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: 'Open Sans Condensed', sans-serif;
+    line-height: 1.6;
+    background-color: #f0f0f5;
+    color: rgb(48, 47, 47);
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5%;
+    width: 100%; 
+    background-color: #2e5cb8;
+    color: #2e5cb8; /* 2px solid #2e5cb8*/
+    font-size: 16px;
+    position: inherit;
+
+  }
+
+  .iman {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row:unset;
+    grid-gap: 2px;
+    position: absolute;
+    margin-top: 3rem;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: left;
+    box-sizing: border-box;
+  }
+  
+  .container2 {
+    overflow: hidden;
+    margin-top: -10px;
+    margin-left: 0px;
+  }
+  
+  h1 {
+    text-align: justify;
+    padding:  3px;
+    background-color: #2e5cb8;
+    margin: -1.8rem 0 2rem 0;
+    font-size: 13px;
+    color: white;
+    border-radius: 8px;
+  }
+  
+  p {
+    text-align: justify;
+    text-indent: 1em;
+    margin-top: 0.5rem;
+    font-size: 12px;
+  }
+  
+  p:hover {
+    font-size: 14px;
+  }
+  
+  .card {
+    padding: 10px;
+    margin: 12px;
+    margin-top: 30px;
+    background: #f2f2f2;
+    flex: 1 10%;
+    border-radius: 8px;
+    box-shadow: 2px 4px 15px #5c618f1f;
+   }
+  
+   .card:hover {
+    box-shadow: 2px 8px 45px rgba(12, 32, 216, 0.322);
+    transform: translate3D(0px, -16px, 0);
+  }
+  .card2 {
+    overflow: hidden;
+    flex: initial;
+    margin-top: 0px;
+    border-radius: 8px;
+    transition: all .2s linear;
+    width: auto;
+  }
+  a {
+    padding: 4px;
+    background-color: #595959;
+    color: white;
+    border-radius: 10px 0 10px 0;
+    text-decoration-line: none;
+  }
+
+  .abtn {
+    padding: .8rem 3rem; position:fixed; margin-top: 1.5rem; width: 18rem;
+  }
+  
+  .inf {
+    
+    flex: initial;
+    margin-top: 0.7rem;
+    margin-left: 28%;
+    padding: 18px;
+    background: #e6e6e6;
+    font-size: 20px;
+    position: absolute;
+    color: #2e5cb8;
+    box-shadow: 0 3px;
+  }
+  .mySlides {display: none}
+  img {vertical-align: middle;}
+  
+  /* Slideshow container */
+  .slideshow-container {
+    width: 83%;
+    position: relative;
+    margin: 2rem 22rem;
+  }
+  
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+  /* The dots/bullets/indicators */
+  .dot {
+    display: inline-block;
+    width: 1.2rem;
+    height: 1.2rem;
+    background-color: #333;
+    background-clip: content-box;
+    border: 0.25rem solid transparent;
+    border-radius: 50%;
+    font-size: 0;
+    transition: transform 0.1s;
+  }
+  
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+  
+  /* Fading animation */
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 15.5s;
+    animation-name: fade;
+    animation-duration: 25.5s;
+  }
+  
+  @-webkit-keyframes fade {
+    from {opacity: .8}
+    to {opacity: 1}
+  }
+  
+  @keyframes fade {
+    from {opacity: .8}
+    to {opacity: 1}
+  }
+  
+  /* On smaller screens, decrease text size */
+  @media only screen and (max-width: 300px) {
+    .prev, .next,.text {font-size: 11px}
+  }
+  
+.footer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #2e5cb8;
+    margin-top: 1rem;
+  }
+
+.footer1, .footer2, .footer3 {
+    border-radius: 13px 0 13px 0;
+    background-color: #595959;
+    margin: 20px 1.15%;
+  }
+
+.footer1, .footer2 {
+    flex: initial;
+    width: 22%;
+  }
+  
+ h2{
+    position: static;
+    font-size: 12px;
+    color: white;
+    text-align: center;
+  }
+  
+  .forma {
+    border-radius: 20px;
+    box-shadow: 1px 1px 1px black;
+    padding: 2rem 14rem 3rem 0;
+    width: 600px;
+    display: flex;
+    margin-left: 30%;
+    margin-top: 4%;
+  }
+  
+  .formPersonnel {
+    background: #e6e6e6;
+    border-radius: 20px;
+    box-shadow: 1px 1px 1px black;
+    padding: 2rem 14rem 3rem 0;
+    width: 62%;
+    display: flex;
+    margin-left: 20%;
+    margin-top: 1.5%;
+  }
+  
+  .form-person{
+    display:flex;
+    line-height: 1.5;
+    margin-top: 0.3rem;
+  }
+  .form-group {
+    display:block;
+    line-height: 1.5;
+    margin-top: 0.3rem;
+    text-align: center;
+  }
+  
+  input{
+    box-shadow: inset 1px 1px 3px #ccc;
+    border-radius: 5px;
+    width: 20rem;
+    font-size: 12px;
+  }
+  
+  label {
+    width: 10rem;
+  }
+  
+  label, input[type="text"] {
+    display: block;
+    font-family: inherit;
+    font-size: 12px;
+    padding: 0;
+    margin-left: 1rem;
+    margin-top: 0;
+    box-sizing: border-box;
+    padding: 5px;
+  }
+  
+  input:hover, input:focus, textarea:hover, textarea:focus {
+    background-color: #eee;
+  }
+  
+  .btn-primary {
+    color:#fff;
+    background-color:#2e5cb8;
+    border-color:#007bff;
+    width: auto;
+    padding: 0.2rem;
+    margin-top: 1.5rem;
+    margin-left: 12rem;
+    border-radius: 10px 0 10px 0;
+    line-height: 1.5rem;
+    font-size: 12px;
+  }
+
+  .btn-secund{
+    color:#fff;
+    background-color:#b82e2e;
+    border-color:#ff4800;
+    width: auto;
+    padding: 0.2rem;
+    margin-top: 1.5rem;
+    margin-left: 12rem;
+    line-height: 1.5rem;
+    font-size: 12px;
+  }
+  
+  .btn-primary:hover {
+    color:#fff;
+    background-color:#0069d9;
+    border-color:#0062cc; 
+    padding: 0.4rem;
+    border-radius: 10px 0 10px 0;
+  }
+
+  .btn-secund:hover {
+    color:#fff;
+    background-color:#d63939;
+    border-color:#ff520e; 
+    padding: 0.4rem;
+    border-radius: 10px 0 10px 0;
+  }
+  
+  
+  .btn-primary.focus,.btn-primary:focus {
+    color:#fff;
+    background-color:#0069d9;
+    border-color:#0062cc;
+    box-shadow:0 0 0 .2rem rgba(38,143,255,.5) }
+  
+    /* Add your flexbox CSS below here */
+  
+  .section {
+    display: flex;
+    margin-top: 1rem;
+  }
+
+  .sectionform {
+    margin-left: 18rem;
+  }
+  
+  .article {
+    display: flex;
+    /*padding: 10px;*/
+    margin: 10px;
+  }
+  
+  .article {
+    flex: 2 10px;
+  }
+  
+  .article:nth-of-type(1) {
+    flex: 2 5px;
+    flex-flow: column;
+  }
+   
+  table {
+    border-collapse: collapse;
+    letter-spacing: 1px;
+    font-size: 12px;
+    margin-left: 1.5rem;
+  }
+  th {
+    padding: 10px 18px;
+    width: 11rem;
+    background-color: rgb(217,217,217);
+    font-size: 12px;
+
+  }
+  td {
+    padding: 5px 5px;
+    width: 13rem;
+    text-align: left;
+    font-size: 12px;
+  }
+  .menu {
+    margin-top: 10px;
+  }
+  .menu > li {
+    display: inline;
+    margin-right: 10px;
+  }
+  .menu > li:last-of-type{
+    margin-right: 0;
+  }
+  
+  li {
+    padding: 0 1.5rem 0rem;
+    margin-left: 0rem;
+    counter-increment: my-awesome-counter;
+    list-style: none;
+  }
+
+  li::before {
+    content: counter(my-awesome-counter);
+    background: #87b5f0;
+    width: 1.8rem;
+    height: 1.8rem;
+    border-radius: 50%;
+    display: inline-block;
+    line-height: 2rem;
+    color: white;
+    text-align: center;
+    margin-right: 0.5rem;
+  }
+
+  .cul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-row:unset;
+    grid-gap: 18px;
+    font-size: 12px;
+    
+  }
+
+  textarea {
+    margin: 1rem 1.5rem 1rem; 
+    text-align: justify;
+    margin-bottom: 1em;
+    height: 16rem;
+    width: 55rem;
+    font-size: 12px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: 'Open Sans Condensed', sans-serif;
+  }
+
+  .vtextarea {
+    margin: 1rem 1.5rem 1rem;
+    white-space:pre-wrap;
+    
+    text-align: justify;
+    
+    font-size: 12px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: 'Open Sans Condensed', sans-serif;
+  }
+
+  fieldset {
+    border: none;
+  }
+
+  input[type="checkbox"] {
+    height: 24px;
+    width: 4rem;
+    margin-left: 1rem;
+  }
+
+  .marginuser {
+    margin-top: 1.5rem;
+  }
+  input[type=date]{-webkit-appearance:none;-moz-appearance:none;appearance:none; initial-value:initial;}
+
+  .alert {
+    position: relative;
+    padding: .75rem 1.25rem;
+    margin-bottom: .5rem;
+    margin-top: 2rem;
+    margin-left: 10rem;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    width: 30rem;
+  }
+
+  .alert-dismissible {
+    padding-right: 4rem;
+}
+
+.alert-dismissible .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    padding: .75rem 1.25rem;
+    color: inherit;
+}
+
+.alert-danger {
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+}
+
+.alert-danger hr {
+  border-top-color: #f1b0b7;
+}
+
+.alert-danger .alert-link {
+  color: #491217;
+}
+
+.close {
+  float: right;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+  color: #000;
+  text-shadow: 0 1px 0 #fff;
+  opacity: .5;
+}
+
+.close:hover {
+  color: #000;
+  text-decoration: none;
+}
+
+.close:not(:disabled):not(.disabled):focus, .close:not(:disabled):not(.disabled):hover {
+  opacity: .75;
+}
+
+button.close {
+  padding: 0;
+  background-color: transparent;
+  border: 0;
+}
+
+.alert-success {
+  color: #155724;
+  background-color: #d4edda;
+  border-color: #c3e6cb
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1050;
+  display: none;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  outline: 0
+}
+
+.modal-dialog {
+  position: relative;
+  width: auto;
+  margin: .5rem;
+  pointer-events: none
+}
+
+.modal-content {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  pointer-events: auto;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, .2);
+  border-radius: .3rem;
+  outline: 0
+}
+
+.modal-header {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 1rem 1rem;
+  border-bottom: 1px solid #dee2e6;
+  border-top-left-radius: calc(.3rem - 1px);
+  border-top-right-radius: calc(.3rem - 1px)
+}
+
+.modal-body {
+  position: relative;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  padding: 1rem
+}
+
+.modal-footer {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  padding: .75rem;
+  border-top: 1px solid #dee2e6;
+  border-bottom-right-radius: calc(.3rem - 1px);
+  border-bottom-left-radius: calc(.3rem - 1px)
+}
+
+.modal-footer>* {
+  margin: .25rem
+}
+
+.btn-secondary:hover {
+    color: #fff;
+    background-color: #5a6268;
+    border-color: #545b62
+}
+
+.line1 {
+  width: 200px;
+  height: 1.5px;
+  background-color: #ffffff;
+  position:relative;
+  animation-name: move;
+  animation-duration: 12s;
+}
+
+@keyframes move {
+  0%   {background-color:red; left:2rem; top:40rem;}
+  25%  {background-color:yellow; left:40rem; top:30rem;}
+  50%  {background-color:blue; left:2rem; top:30rem;}
+  75%  {background-color:green; left:40rem; top:30rem;}
+  100% {background-color:#2e5cb8; left:2rem; top:30rem;}
+}
+
+.titule {
+  position:sticky;
+  padding: 1rem 1rem;
+  background-color:rgba(204, 224, 252, 0.5);
+  margin-top: 2rem;
+  margin-left: 4rem;
+  width: 90%;
+  text-align:center;
+  font-size: 26px;
+  box-shadow: 0 0.1rem;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+.llabel {
+  display: block;
+  font-family: inherit;
+  font-size: 12px;
+  margin-top: 0;
+  box-sizing: border-box;
+  padding: 4px;
+  margin-left: -.1rem;
+  width: 20rem;
+  background-color: white;
+  border: solid rgba(0, 0, 0, .5) 2px;
+  box-shadow: solid 1px 1px 3px; border-radius: 5px;
+}

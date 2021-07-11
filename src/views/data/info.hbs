@@ -1,0 +1,187 @@
+<div class="section">
+    <div class="article">
+        <div style="margin-left: 1rem;">
+            <div class="card" style="position:static;">
+                {{#if dataperson}}
+                <h1>Información Personal</h1>
+                {{#each dataperson}}
+                <div>
+                    <a href="/person/edit/{{_id}}" class="btn-primary" style="margin-left: 43rem;">Editar</a>
+                    <a href="/person/delete/{{_id}}" class="btn-secund" style="margin-left: 1rem;">Borrar</a>
+                </div>
+                <table>
+                    <tr>
+                        <th>Nombre Apellido</th>
+                        <th>Pais</th>
+                        <th>Telefono</th>
+                        <th>Email</th>
+                    </tr>
+                    <td>{{firts_name}} {{last_name}}</td>
+                    <td>{{country}}</td>
+                    <td>{{phone}}</td>
+                    {{/each}}
+                    {{/if}}
+
+                    {{#if datauser}}
+                    <td>{{datauser.email}}</td>
+                    {{/if}}
+                </table>
+                {{#if dataperson}}
+                {{#each dataperson}}
+                <table>
+                    <tr>
+                        <th>Linkedin</th>
+                        <th>Skype</th>
+                        <th>Otra Red Social</th>
+                    </tr>
+                    <td>{{linkedin}}</td>
+                    <td>{{skype}}</td>
+                    <td>{{github}}</td>
+                </table>
+                <table>
+                    <th>Sumario</th>
+                </table>
+                <section class="vtextarea">{{summary}}</section>
+                {{/each}}
+                {{else}} <h1 style="width: 55rem;">Información Personal No Agregada</h1>
+                {{/if}}
+            </div>
+            <div class="card">
+                {{#if dataedu}}
+                <h1>Información Educativa</h1>
+                <table>
+                    <tr>
+                        <th>Profesion</th>
+                        <th>Instituto/Universidad</th>
+                        <th>Fecha Inicio </th>
+                        <th>Fecha Completado </th>
+                    </tr>
+                </table>
+                {{#each dataedu}}
+                <table>
+                    <td>¤ {{school}}</td>
+                    <td>{{carrer}}</td>
+                    <td>{{moment from "DD/MM/YYYY"}}</td>
+                    <td>{{moment to "DD/MM/YYYY"}}</td>
+                    <td>
+                        <a href="/edu/edit/{{_id}}" class="btn-primary" style="margin-left: 1rem;">Editar</a>
+                        <a href="/edu/delete/{{_id}}" class="btn-secund" style="margin-left: 1rem;">Borrar</a>
+                    </td>
+                    <!--   <form action="/edu/delete/{{_id}}?_method=DELETE" method="POST">
+                            <input type="hidden" name="_method" value="DELETE">
+                        <button type="submit" class="btn-secund" style="margin-left: 2rem;">Borrar</button>
+                    </form>-->
+                </table>
+                {{/each}}
+                {{else}} <h1>Información Educativa No Agregada</h1>
+                {{/if}}
+            </div>
+            <div class="card">
+                {{#if datalang}}
+                <h1>Información Idiomas</h1>
+                <table>
+                    <tr>
+                        <th>Idioma</th>
+                        <th>Nivel</th>
+                    </tr>
+                </table>
+                {{#each datalang}}
+                <table>
+                    <td>¤ {{idioms}}</td>
+                    <td>{{level}}</td>
+                    <td>
+                        <a href="/lang/edit/{{_id}}" class="btn-primary" style="margin-left: 1rem;">Editar</a>
+                        <a href="/lang/delete/{{_id}}" class="btn-secund" style="margin-left: 2rem;">Borrar</a>
+                    </td>
+                </table>
+                {{/each}}
+                {{else}} <h1>Información Idiomas No Agregada</h1>
+                {{/if}}
+            </div>
+            <div class="card">
+                {{#if dataknow}}
+                <h1>Información Conocimientos</h1>
+                <ol class="cul">
+                    {{#each dataknow}}
+                    <li>{{knowing}}</li>
+                    {{/each}}
+                </ol>
+                {{else}} <h1>Información Conocimientos No Agregada</h1>
+                {{/if}}
+            </div>
+            <div class="card">
+                {{#if dataskills}}
+                <h1>Información Habilidades</h1>
+                <ol class="cul">
+                    {{#each dataskills}}
+                    <li>{{skill}}</li>
+                    {{/each}}
+                </ol>
+                {{else}} <h1>Información Habilidades No Agregada</h1>
+                {{/if}}
+            </div>
+            <div class="card">
+                {{#if dataexp}}
+                <h1>Detalles Experiencia Profesional</h1>
+                {{#each dataexp}}
+                <table>
+                    <tr>
+                        <th>Empresa</th>
+                        <th>Cargo/Función</th>
+                        <th>Fecha Inicio</th>
+                        <th>Fecha Salida</th>
+                    </tr>
+                </table>
+                <table>
+                    <td>¤ {{company}}</td>
+                    <td>{{position}}</td>
+                    <td>{{moment wfrom "DD/MM/YYYY"}}</td>
+                    {{#if follow}}
+                    <td>{{follow}}</td>
+                    {{else}}
+                    <td>{{moment wto "DD/MM/YYYY"}}</td>
+                    {{/if}}
+                    <td>
+                        <a href="/exp/edit/{{_id}}" class="btn-primary" style="margin-left: 1rem;">Editar</a>
+                        <a href="/exp/delete/{{_id}}" class="btn-secund" style="margin-left: 1rem;">Borrar</a>
+                    </td>
+                </table>
+                <table>
+                    <th>Detalle de Cargo o Función</th>
+                </table>
+                <section class="vtextarea">{{detail}}</section>
+                {{/each}}
+                {{else}} <h1>Información Experiencia No Agregada</h1>
+                {{/if}}
+            </div>
+        </div>
+    </div>
+
+    <div class="article">
+        <a style="padding: .8rem 3rem; position:fixed; margin-left: -.5rem; margin-top: .1rem; width: 10rem;">Agregar Registros</a>
+        {{#if dataperson}}
+        <a class="btn-primary"
+            style="padding: .8rem 3rem; position:fixed; margin-top: 1.5rem; width: 15rem; background-color:rgb(175, 175, 170)">Información
+            Personal</a>
+        {{else}}
+        <a href="/person/add" class="btn-primary"
+            style="padding: .8rem 3rem; position:fixed; margin-top: 1.5rem; width: 15rem;">Información Personal</a>
+        {{/if}}
+        <a href="/edu/add" class="btn-primary"
+            style="padding: .8rem 3rem; position:fixed; margin-top: 5.5rem; width: 15rem;">Educación</a>
+        <a href="/lang/add" class="btn-primary"
+            style="padding: .8rem 3rem; position:fixed; margin-top: 9.5rem; width: 15rem;">Languages</a>
+        <a href="/know/add" class="btn-primary"
+            style="padding: .8rem 3rem; position:fixed; margin-top: 13.5rem; width: 15rem;">Conocimientos</a>
+        <a href="/skill/add" class="btn-primary"
+            style="padding: .8rem 3rem; position:fixed; margin-top: 17.5rem; width: 15rem;">Habilidades</a>
+        <a href="/exp/add" class="btn-primary"
+            style="padding: .8rem 3rem; position:fixed; margin-top: 21.5rem; width: 15rem;">Experiencia</a>
+        <a href="/pdf" class="btn-primary"
+            style="padding: .8rem 3rem; position:fixed; margin-top: 25.5rem; width: 15rem;">Exportar a PDF</a>
+        <a href="/email/{{datauser._id}}" class="btn-primary"
+            style="padding: .8rem 3rem; position:fixed; margin-top: 29.5rem; width: 15rem;">Enviar Email</a>
+
+    </div>
+</div>
+{{>footer}}

@@ -1,0 +1,42 @@
+<div class="section sectionform">
+    <div class="article" style="margin-left: -12rem;">
+        <div class="card">
+            <h1>Ingresar Datos Experiencia Laboral</h1>
+            <form action="/exp/add" method="POST">
+                <div class="form-person">
+                    <label for="company">Empresa</label>
+                    <input type="text" placeholder="Ingrese su Nombre Empresa" name="company">
+                    <label for="wfrom">Fecha Inicio</label>
+                    <input type="date" placeholder="Ingrese Fecha de Inicio" name="wfrom">
+                </div>
+                <div class="form-person">
+                    <label for="position">Cargo/Función</label>
+                    <input type="text" placeholder="Ingrese su Cargo" name="position">
+                    <fieldset id="check" class="form-person">
+                        <label for="wto">Fecha Salida</label>
+                        <input type="date" placeholder="Ingrese Fecha de Salida" name="wto">
+                    </fieldset>
+                </div>
+                <div class="form-person">
+                    <label for="follow">Continua en Cargo</label>
+                    <input type="checkbox" name="follow" id="follow"> 
+                </div>
+
+                <div class="form-person">
+                    <label for="detail">Detalle de la función</label>
+                    <textarea  placeholder="Sumario max 500 Caracteres" name="detail"></textarea>
+                </div>
+                <button type="submit" class="btn-primary">Salvar</button>
+            </form>
+        </div>
+    </div>
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        document.getElementById('follow').addEventListener('change', review);
+      }, true);
+      function review() {
+        let Items = document.querySelectorAll('#check input[type="date"]');
+        Items[0].disabled = !Items[0].disabled;
+       }
+</script>

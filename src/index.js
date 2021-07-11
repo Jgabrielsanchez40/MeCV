@@ -9,7 +9,6 @@ const moment = require('moment-timezone');
 
 //const fs = require('fs');
 //const pdfkit = require('pdfkit');
-require('dotenv').config();
 
 var Handlebars = require("handlebars");
 var MomentHandler = require("handlebars.moment");

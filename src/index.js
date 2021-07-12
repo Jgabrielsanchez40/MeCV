@@ -24,11 +24,6 @@ module.exports = function dateFormat(date, format, utc) {
 };
 
 //Setting
-var port = normalizePort(process.env.PORT || '3000');
-app.set('port', port);
-
-var server = http.createServer(app);
-
 //app.set('port', process.env.PORT || 3000);
 app.set('views', path.join(__dirname, 'views'));
 app.engine('.hbs', exphbs({
@@ -78,21 +73,4 @@ app.use(require('./routes/email'));
 app.use(express.static(path.join(__dirname, 'public')));
 
 //Server is listenning
-server.listen(port);
-
-function normalizePort(val) {
-    var port = parseInt(val, 10);
-  
-    if (isNaN(port)) {
-      // named pipe
-      return val;
-    }
-  
-    if (port >= 0) {
-      // port number
-      return port;
-    }
-  
-    return false;
-  }
-//app.listen(process.env.PORT || 3000);
+app.listen(process.env.PORT || 3000);

@@ -4,8 +4,6 @@ const personnels = require('../models/personnels');
 const educations = require('../models/educations');
 const nodemailer = require('nodemailer');
 const nodemailerSendgrid = require('nodemailer-sendgrid');
-const config = require('../config.js');
-
 
 const router = Router();
 
@@ -39,7 +37,7 @@ router.post('/email/:id', async (req, res) => {
 
     const transporter = nodemailer.createTransport(
         nodemailerSendgrid({
-            apiKey: `${config.KEYEMAIL}`
+            apiKey: `${process.env.KEYEMAIL}`
         })
     );
 

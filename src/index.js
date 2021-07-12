@@ -5,10 +5,11 @@ const methodOverride = require('method-override');
 const session = require('express-session');
 const flash = require('connect-flash');
 const passport = require('passport');
-const moment = require('moment-timezone');
+const dotenv = require('dotenv');
 
 //const fs = require('fs');
 //const pdfkit = require('pdfkit');
+dotenv.config();
 
 var Handlebars = require("handlebars");
 var MomentHandler = require("handlebars.moment");

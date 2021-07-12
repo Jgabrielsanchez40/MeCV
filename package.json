@@ -3,10 +3,12 @@
   "version": "1.0.0",
   "description": "Load and Copy file resume CV",
   "main": "index.js",
-  "scripts": {
+  "private": true,
+  "engines": { "node": "12.18.2 "
+  },
+    "scripts": {
     "start": "node src/index.js",
-    "dev": "nodemon src/index.js",
-    "serverstart": "DEBUG=Mecv:* npm run dev"
+    "dev": "nodemon src/index.js"
   },
   "author": "Jose G Sanchez",
   "license": "ISC",

@@ -19,7 +19,7 @@ MomentHandler.registerHelpers(Handlebars);
 const app = express();
 require('./database');
 require('./config/passport');
-moment().tz("America/Caracas").format();
+
 module.exports = function dateFormat(date, format, utc) {
     return (utc === true) ? moment(date).utc().format(format) : moment(date).format(format);
 };
@@ -75,3 +75,5 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 //Server is listenning
 app.listen(process.env.PORT || 3000);
+
+module.exports = index;

@@ -4,7 +4,7 @@
   "description": "Load and Copy file resume CV",
   "main": "index.js",
   "scripts": {
-    "start": "node src/index.js",
+    "start": "node ./src/index.js",
     "dev": "nodemon src/index.js",
     "serverstart": "DEBUG=Mecv:* npm run dev"
   },

@@ -29,7 +29,7 @@ router.post('/email/:id', async (req, res) => {
                 <li>Email: ${datauser.email}</li>
             </ul></br>
             <p>${message}.</p></br>
-        <p>Mayor informacion y Detalle del Perfil, favor ingresar <a href="http://localhost:3000/review/${datauser._id}">aqui</a></p><hr>
+        <p>Mayor informacion y Detalle del Perfil, favor ingresar <a href="https://mecv.herokuapp.com/review/${datauser._id}">aqui</a></p><hr>
         <p style="font-size: 10px; margin-left: 180px; margin-top: 20px">MeCV es aplicacion gratuita para la carga de resumen CV, el cual podra:</p>
       <p style="font-size: 10px; margin-left: 210px;">Mantener en Linea | Descargar en PDF | Enviar Email</p><hr>
         </div>

@@ -42,7 +42,7 @@ router.get('/pdf', async (req, res) => {
   const namefile = 'MeRcv-' + `${idi}` + '.pdf';
 
   const doc = new pdfKit();
-  download(doc.pipe(fs.createWriteStream(namefile)));
+  download('https://mecv.herokuapp.com/', doc.pipe(fs.createWriteStream(namefile)));
   
   let Y = 152;
   let x = 0;

@@ -75,5 +75,3 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 //Server is listenning
 app.listen(process.env.PORT || 3000);
-
-module.exports = index;
